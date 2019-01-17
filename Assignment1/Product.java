@@ -1,18 +1,18 @@
-
 public class Product {
 
-	String product_Name;
-	double product_Price;
-	int product_Quantity;
-	
-	void addProduct(String product_Name,double product_Price,int product_Quantity){
-		this.product_Name=product_Name;
-		this.product_Price=product_Price;
-		this.product_Quantity=product_Quantity;
+	private String productName;
+	protected double productPrice;
+	protected int productQuantity;
+
+	Product(String productName, double productPrice, int productQuantity) {
+		this.productName = productName;
+		this.productPrice = productPrice;
+		this.productQuantity = productQuantity;
 	}
-	
-	void product_display(){
-		System.out.println("--ProductName:"+product_Name+"	"+"ProductPrice:"+product_Price+"--");
-	
+
+	void productDisplay() {
+		System.out.println("--ProductName:" + productName + "	"
+				+ "ProductPrice:" + productPrice + "--");
+
 	}
 }
