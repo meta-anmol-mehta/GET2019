@@ -14,12 +14,20 @@ public class HexCalculator {
 
 		System.out.println("Enter First Hexadecimal String");
 		hexNum1 = input.next();
-
+		
 		System.out.println("Enter second Hexadecimal String");
 		hexNum2 = input.next();
 
+		
+		
 		HexCalc calc = new HexCalc(hexNum1, hexNum2);
 
+		if(!(calc.isValid(hexNum1)&&calc.isValid(hexNum2))){
+			
+			System.out.println("Enter valid hexadecimal number");
+			System.exit(0);
+		}
+		
 		do {
 			System.out.println("1.For Add");
 			System.out.println("2.For Subtract");

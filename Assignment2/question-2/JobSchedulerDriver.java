@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class JobSchedulerDriver {
-
+	static final int MAX_COLUMN = 2;
 	public static void main(String[] args) {
 		// MAX_COLUMN define index 0 for burst time and index 1 for arrival time
 		// of 2D array
-		final int MAX_COLUMN = 2;
+		
 
 		Scanner input = new Scanner(System.in);
 		// noOfProcess defines the no of process in queue
@@ -53,29 +53,17 @@ public class JobSchedulerDriver {
 
 		System.out.println("Waiting time of all the process");
 
-		for (int i = 0; i < noOfProcess; ++i) {
-
-			System.out.println("P" + i + " has " + waitingTime[i]
-					+ " waiting time");
-
-		}
+		scheduler.Display(processCompletionTime, noOfProcess, "Waiting");
+		
 		System.out.println("Turn Around time of all the process");
-		for (int i = 0; i < noOfProcess; ++i) {
-
-			System.out.println("P" + i + " has " + turnAroundTime[i]
-					+ " turn around time");
-
-		}
+		scheduler.Display(processCompletionTime, noOfProcess, "Turn Around");
+		
 		System.out.println("Completion time of all the process");
-		for (int i = 0; i < noOfProcess; ++i) {
-
-			System.out.println("P" + i + " has " + processCompletionTime[i]
-					+ " completion time");
-
-		}
+		scheduler.Display(processCompletionTime, noOfProcess, "Completion");
 		System.out.println("Average waiting time=" + averageWaitingTime);
 		System.out.println("Maximum waiting time=" + maxWaitingTime);
 
 	}
+	
 
 }

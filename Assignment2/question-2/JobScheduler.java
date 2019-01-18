@@ -3,15 +3,13 @@ class JobScheduler {
 	protected int noOfProcess;
 	protected int[][] processes;
 	// A constant to represent index of burst time in 2D array
-	protected final int INDEX_OF__BURST_TIME;
+	protected final int INDEX_OF__BURST_TIME=1;
 	// A constant to represent index of arrival time in 2D array
-	protected final int INDEX_OF_ARRIVAL_TIME;
+	protected final int INDEX_OF_ARRIVAL_TIME=0;
 
 	public JobScheduler(int noOfProcess, int[][] processes) {
 		this.noOfProcess = noOfProcess;
 		this.processes = processes;
-		INDEX_OF__BURST_TIME = 1;
-		INDEX_OF_ARRIVAL_TIME = 0;
 	}
 
 	// completionTime of process is equal to turn around time and arrival time
@@ -109,5 +107,13 @@ class JobScheduler {
 		}
 
 		return max;
+	}
+	void Display(int []Time,int noOfProcesses,String message){
+		for (int i = 0; i < noOfProcesses; ++i) {
+
+			System.out.println("P" + i + " has " + Time[i]+message+
+					" time");
+
+		}
 	}
 }

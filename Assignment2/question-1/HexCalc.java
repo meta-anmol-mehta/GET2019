@@ -5,6 +5,7 @@ public class HexCalc {
 
 	private String hexNum1;
 	private String hexNum2;
+	private int decimalNum1, decimalNum2;
 
 	// Constructor to initialize values of dataMember of class HexCalc
 
@@ -21,10 +22,10 @@ public class HexCalc {
 	// number and storing in string format and returning them
 
 	protected String addNumber() {
+		
+		decimalNum1 = Integer.parseInt(hexNum1, 16);
 
-		int decimalNum1 = Integer.parseInt(hexNum1, 16);
-
-		int decimalNum2 = Integer.parseInt(hexNum2, 16);
+		decimalNum2 = Integer.parseInt(hexNum2, 16);
 
 		int sum = decimalNum1 + decimalNum2;
 
@@ -41,9 +42,9 @@ public class HexCalc {
 	// number and storing in string format and returning them
 
 	protected String subtractNumber() {
-		int decimalNum1 = Integer.parseInt(hexNum1, 16);
+		decimalNum1 = Integer.parseInt(hexNum1, 16);
 
-		int decimalNum2 = Integer.parseInt(hexNum2, 16);
+		decimalNum2 = Integer.parseInt(hexNum2, 16);
 
 		int difference = decimalNum1 - decimalNum2;
 
@@ -60,9 +61,9 @@ public class HexCalc {
 	// number and storing in string format and returning them
 	protected String multiplyNumber() {
 
-		int decimalNum1 = Integer.parseInt(hexNum1, 16);
+		decimalNum1 = Integer.parseInt(hexNum1, 16);
 
-		int decimalNum2 = Integer.parseInt(hexNum2, 16);
+		decimalNum2 = Integer.parseInt(hexNum2, 16);
 
 		int multiply = decimalNum1 * decimalNum2;
 
@@ -79,9 +80,9 @@ public class HexCalc {
 	// number and storing in string format and returning them
 	protected String divideNumber() {
 
-		int decimalNum1 = Integer.parseInt(hexNum1, 16);
+		decimalNum1 = Integer.parseInt(hexNum1, 16);
 
-		int decimalNum2 = Integer.parseInt(hexNum2, 16);
+		decimalNum2 = Integer.parseInt(hexNum2, 16);
 
 		int quotient = decimalNum1 / decimalNum2;
 
@@ -100,9 +101,9 @@ public class HexCalc {
 	protected String addNumber(int base) {
 
 		try {
-			int decimalNum1 = Integer.parseInt(hexNum1, base);
+			decimalNum1 = Integer.parseInt(hexNum1, base);
 
-			int decimalNum2 = Integer.parseInt(hexNum2, base);
+			decimalNum2 = Integer.parseInt(hexNum2, base);
 
 			int sum = decimalNum1 + decimalNum2;
 
@@ -130,9 +131,9 @@ public class HexCalc {
 	protected String subtractNumber(int base) {
 
 		try {
-			int decimalNum1 = Integer.parseInt(hexNum1, base);
+			decimalNum1 = Integer.parseInt(hexNum1, base);
 
-			int decimalNum2 = Integer.parseInt(hexNum2, base);
+			decimalNum2 = Integer.parseInt(hexNum2, base);
 
 			int difference = decimalNum1 - decimalNum2;
 
@@ -161,9 +162,9 @@ public class HexCalc {
 	protected String multiplyNumber(int base) {
 
 		try {
-			int decimalNum1 = Integer.parseInt(hexNum1, base);
+			decimalNum1 = Integer.parseInt(hexNum1, base);
 
-			int decimalNum2 = Integer.parseInt(hexNum2, base);
+			decimalNum2 = Integer.parseInt(hexNum2, base);
 
 			int multiply = decimalNum1 * decimalNum2;
 
@@ -191,9 +192,9 @@ public class HexCalc {
 
 	protected String divideNumber(int base) {
 		try {
-			int decimalNum1 = Integer.parseInt(hexNum1, base);
+			decimalNum1 = Integer.parseInt(hexNum1, base);
 
-			int decimalNum2 = Integer.parseInt(hexNum2, base);
+			decimalNum2 = Integer.parseInt(hexNum2, base);
 
 			int quotient = decimalNum1 / decimalNum2;
 
@@ -230,10 +231,12 @@ public class HexCalc {
 
 	// checking whether two strings are equal are not
 	protected boolean isEqual() {
+		String newHexNum1 = hexNum1.toLowerCase();
 
+		String newHexNum2 = hexNum2.toLowerCase();
 		for (int i = 0; i < hexNum1.length(); ++i) {
 
-			if (hexNum1.charAt(i) != hexNum2.charAt(i)) {
+			if (newHexNum1.charAt(i) != newHexNum2.charAt(i)) {
 				return false;
 			}
 
@@ -244,10 +247,12 @@ public class HexCalc {
 
 	// checking whether first string is greater or not
 	protected boolean isGreater() {
+		String newHexNum1 = hexNum1.toLowerCase();
 
+		String newHexNum2 = hexNum2.toLowerCase();
 		for (int i = 0; i < hexNum1.length(); ++i) {
 
-			if (hexNum1.charAt(i) > hexNum2.charAt(i)) {
+			if (newHexNum1.charAt(i) > newHexNum2.charAt(i)) {
 				return true;
 			}
 
@@ -259,9 +264,12 @@ public class HexCalc {
 	// checking whether first string is smaller or not
 	protected boolean isSmall() {
 
+		String newHexNum1 = hexNum1.toLowerCase();
+
+		String newHexNum2 = hexNum2.toLowerCase();
 		for (int i = 0; i < hexNum1.length(); ++i) {
 
-			if (hexNum1.charAt(i) < hexNum2.charAt(i)) {
+			if (newHexNum1.charAt(i) < newHexNum2.charAt(i)) {
 				return true;
 			}
 
@@ -270,4 +278,59 @@ public class HexCalc {
 		return false;
 	}
 
+	protected static int toDecimal(String hexValue) {
+		int desiValue = 0;
+		int index, digitIndex = 0;
+
+		for (index = hexValue.length() - 1; index >= 0; index--) {
+			if (hexValue.charAt(index) >= '0' && hexValue.charAt(index) <= '9')
+				desiValue += (hexValue.charAt(index) - 48)
+						* Math.pow(16, digitIndex);
+			else if (hexValue.charAt(index) >= 'A'
+					&& hexValue.charAt(index) <= 'F')
+				desiValue += (hexValue.charAt(index) - 55)
+						* Math.pow(16, digitIndex);
+			;
+			digitIndex++;
+		}
+		return desiValue;
+	}
+
+	protected String toHexa(int desiValue) {
+		String hexValue = "";
+		String reverse = "";
+
+		if (desiValue == 0)
+			return "0";
+
+		while (desiValue != 0) {
+			int reminder = 0;
+
+			reminder = desiValue % 16; // storing remainder in reminder
+										// variable.
+
+			if (reminder < 10) // check if reminder < 10
+				hexValue += ((char) (reminder + 48));
+			else
+				hexValue += ((char) (reminder + 55));
+
+			desiValue = desiValue / 16;
+		}
+
+		for (int i = hexValue.length() - 1; i >= 0; i--) {
+			reverse = reverse + hexValue.charAt(i);
+		}
+		return reverse;
+	}
+
+	protected Boolean isValid(String hexNum){
+		String pattern1 = "^[0-9A-Fa-f]+$";
+		if(hexNum.matches(pattern1)){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
 }
