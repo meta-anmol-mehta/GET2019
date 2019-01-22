@@ -11,11 +11,16 @@ public class UserDefinedStringFunction {
 	 */
 	protected int stringCompare(String firstString, String secondString) {
 		try {
-			for (int i = 0; i < firstString.length(); ++i) {
 
-				if (firstString.charAt(i) != secondString.charAt(i)) {
-					return 0;
+			if (firstString.length() == secondString.length()) {
+				for (int i = 0; i < firstString.length(); ++i) {
+
+					if (firstString.charAt(i) != secondString.charAt(i)) {
+						return 0;
+					}
 				}
+			} else {
+				return 0;
 			}
 		}
 
@@ -34,20 +39,29 @@ public class UserDefinedStringFunction {
 	 * 
 	 * @return reverseString of type string
 	 */
-	protected String stringReverse(String string) {
+	protected String stringReverse(String inputString) {
 
-		try {
-			StringBuilder reverse = new StringBuilder();
+		if (inputString.length == 0) {
+			throw new NullPointerException("String is empty");
+		} else {
 
-			for (int i = string.length(); i > 0; --i) {
-				reverse.append(string.charAt(i - 1));
+			try {
+				StringBuilder reverseString = new StringBuilder();
+
+				for (int i = inputString.length(); i > 0; --i) {
+					reverseString.append(inputString.charAt(i - 1));
+				}
+				return reverseString.toString();
 			}
+
+			catch (Exception e) {
+				System.out.println(e);
+				return null;
+			}
+
 		}
 
-		catch (Exception e) {
-			System.out.println(e);
-		}
-		return reverse.toString();
+		
 	}
 
 	/*
@@ -57,33 +71,38 @@ public class UserDefinedStringFunction {
 	 * 
 	 * @return caseInverted string of type string
 	 */
-	protected String caseInversion(String string) {
+	protected String caseInversion(String inputString) {
 
 		StringBuilder caseChange = new StringBuilder();
 
-		try {
-			int n = string.length();
+		if (inputString.length == 0) {
+			throw new NullPointerException("String is empty");
+		} else {
 
-			int i = 0;
-			int character;
+			try {
+				int n = inputString.length();
 
-			while (n-- != 0) {
-				character = string.charAt(i);
+				int i = 0;
+				int inputCharacter;
 
-				if (character >= 65 && character <= 90) {
-					invertedString.append((char) (character + 32));
-				} else if (character >= 97 && character <= 122) {
-					invertedString.append((char) (character - 32));
-				} else if (character == 32) {
-					invertedString.append(" ");
+				while (n-- != 0) {
+					inputCharacter = string.charAt(i);
+
+					if (inputCharacter >= 'A' && inputCharacter <= 'Z') {
+						invertedString.append((char) (inputCharacter + 32));
+					} else if (inputCharacter >= 'a' && inputCharacter <= 'z') {
+						invertedString.append((char) (inputCharacter - 32));
+					} else if (inputCharacter == 32) {
+						invertedString.append(" ");
+					}
+					i++;
 				}
-				i++;
+
 			}
 
-		}
-
-		catch (Exception e) {
-			System.out.println(e);
+			catch (Exception e) {
+				System.out.println(e);
+			}
 		}
 		return caseChange.toString();
 
@@ -96,46 +115,29 @@ public class UserDefinedStringFunction {
 	 * 
 	 * @return longest of type string
 	 */
-	protected String LongestWord(String string) {
+	protected String longestWord(String inputString) {
 
-		int largest = 0;
+		String largest="";
 		StringBuilder word = new StringBuilder();
+		if (inputString.length == 0) {
+			throw new NullPointerException("String is empty");
+		} else {
+			try {
 
-		try {
+				String[] word=s.split(" ");
+				  for(int i=0;i<word.length;i++){
+				     if(word[i].length()>=longest.length()){
+				       longest=word[i];
+				     }
+				  }
 
-			for (int i = 0, j = 0; i < string.length(); i++) {
-				if (string.charAt(i) == ' ') {
-					if ((i - j) > largest) {
-						largest = (i - j);
-
-						word.delete(0, word.length());
-
-						for (int k = j; k < i; k++) {
-							word.append(string.charAt(k));
-						}
-
-					}
-					j = i + 1;
-				} else if (string.length() == (i + 1)) {
-					if ((i - j) > largest) {
-						largest = (i - j);
-
-						word.delete(0, word.length());
-
-						for (int k = j; k < string.length(); k++) {
-							word.append(string.charAt(k));
-						}
-					}
-					j = i + 1;
-				}
 			}
 
+			catch (Exception e) {
+				System.out.println(e);
+			}
 		}
-
-		catch (Exception e) {
-			System.out.println(e);
-		}
-		return word.toString();
+		return largest;
 	}
 
 }

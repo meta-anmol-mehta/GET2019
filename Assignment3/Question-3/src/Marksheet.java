@@ -22,15 +22,15 @@ public class Marksheet {
 
 		try {
 
-			double averageOfGrade = 0.0;
+			double averageOfGrade = 0.0,sum=0.0;
 
 			for (double particularGrade : grade) {
 
-				averageOfGrade = averageOfGrade + particularGrade;
+				sum = sum + particularGrade;
 
 			}
 
-			averageOfGrade = averageOfGrade / numberOfStudent;
+			averageOfGrade = sum / numberOfStudent;
 
 		}
 

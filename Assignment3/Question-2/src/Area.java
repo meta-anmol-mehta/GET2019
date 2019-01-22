@@ -5,9 +5,9 @@ public class Area {
 	/*
 	 * find the area of a Triangle
 	 * 
-	 * @param width width of Triangle in double
+	 * @param  width of Triangle in double
 	 * 
-	 * @param height height of Triangle in double
+	 * @param  height of Triangle in double
 	 * 
 	 * @return area of Triangle
 	 */
@@ -26,9 +26,9 @@ public class Area {
 	/*
 	 * find the area of a Rectangle
 	 * 
-	 * @param width width of Rectangle in double
+	 * @param  width of Rectangle in double
 	 * 
-	 * @param height height of Rectangle in double
+	 * @param  height of Rectangle in double
 	 * 
 	 * @return area of Rectangle
 	 */
@@ -47,14 +47,14 @@ public class Area {
 	/*
 	 * find the area of a Circle
 	 * 
-	 * @param radius radius of Circle in double
+	 * @param  radius of Circle in double
 	 * 
 	 * @return area of Circle
 	 */
-	protected double circleArea(double width) {
+	protected double circleArea(double radius) {
 
 		try {
-			area = width * width * 3.14;
+			area = radius * radius * 3.14;
 		}
 
 		catch (Exception e) {
@@ -71,9 +71,9 @@ public class Area {
 	 * 
 	 * @return area of Square
 	 */
-	protected double squareArea(double width) {
+	protected double squareArea(double side) {
 		try {
-			area = width * width;
+			area = side * side;
 		}
 
 		catch (Exception e) {
