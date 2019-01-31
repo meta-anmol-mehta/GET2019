@@ -4,7 +4,7 @@ import java.util.Date;
  * Interface Shape containing declarations of methods getArea(), getPerimeter(),
  * getOrigin(), isPointEnclosed(), getTimestamp() etc
  * 
- * @author Richa Jain
+ * @author Anmol mehta
  *
  */
 public interface Shape {

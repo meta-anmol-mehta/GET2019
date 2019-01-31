@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * This class extends Shape class and implements functions such as getArea(), getPerimeter(),
  * getOrigin(), isPointEnclosed() for rectangular shape
- * @author User12
+ * @author Anmol mehta
  *
  */
 public class Rectangle implements Shape {

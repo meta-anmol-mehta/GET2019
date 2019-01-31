@@ -15,13 +15,15 @@ import java.util.Set;
  */
 public class Screen {
 
-	private List<Shape> listOfShapes = new ArrayList<Shape>();
+	private List<Shape> listOfShapes;
 	private final double xMax;
 	private final double yMax;
-	private Set<Integer> shapeId = new HashSet<>();
+	private Set<Integer> shapeId;
 
 	
 	public Screen(double xMax, double yMax) {
+		listOfShapes = new ArrayList<Shape>();
+		shapeId = new HashSet<>();
 		this.xMax = xMax;
 		this.yMax = yMax;
 	}
@@ -203,12 +205,12 @@ public class Screen {
 		List<Shape> areaList = new ArrayList<Shape>(listOfShapes);
 
 		int size = areaList.size();
-		for (int count1 = 0; count1 < size - 1; count1++)
-			for (int count2 = 0; count2 < size - count1 - 1; count2++)
-				if (areaList.get(count2).getArea() > areaList.get(count2 + 1).getArea()) {
-					Shape tempShape = areaList.get(count2);
-					areaList.set(count2, areaList.get(count2 + 1));
-					areaList.set(count2 + 1, tempShape);
+		for (int i = 0; i < size - 1; i++)
+			for (int j = 0; j < size - i - 1; j++)
+				if (areaList.get(j).getArea() > areaList.get(j + 1).getArea()) {
+					Shape tempShape = areaList.get(j);
+					areaList.set(j, areaList.get(j + 1));
+					areaList.set(j + 1, tempShape);
 				}
 		return areaList;
 	}
@@ -223,12 +225,12 @@ public class Screen {
 		List<Shape> perimeterList = new ArrayList<Shape>(listOfShapes);
 
 		int size = perimeterList.size();
-		for (int count1 = 0; count1 < size - 1; count1++)
-			for (int count2 = 0; count2 < size - count1 - 1; count2++)
-				if (perimeterList.get(count2).getPerimeter() > perimeterList.get(count2 + 1).getPerimeter()) {
-					Shape tempShape = perimeterList.get(count2);
-					perimeterList.set(count2, perimeterList.get(count2 + 1));
-					perimeterList.set(count2 + 1, tempShape);
+		for (int i = 0; i < size - 1; i++)
+			for (int j = 0; j < size - i - 1; j++)
+				if (perimeterList.get(j).getPerimeter() > perimeterList.get(j + 1).getPerimeter()) {
+					Shape tempShape = perimeterList.get(j);
+					perimeterList.set(j, perimeterList.get(j + 1));
+					perimeterList.set(j + 1, tempShape);
 				}
 		return perimeterList;
 	}
@@ -243,12 +245,12 @@ public class Screen {
 		List<Shape> distanceList = new ArrayList<Shape>(listOfShapes);
 
 		int size = distanceList.size();
-		for (int count1 = 0; count1 < size - 1; count1++)
-			for (int count2 = 0; count2 < size - count1 - 1; count2++)
-				if (distanceList.get(count2).getDistance() > distanceList.get(count2 + 1).getDistance()) {
-					Shape tempShape = distanceList.get(count2);
-					distanceList.set(count2, distanceList.get(count2 + 1));
-					distanceList.set(count2 + 1, tempShape);
+		for (int i = 0; i < size - 1; i++)
+			for (int j = 0; j < size - i - 1; j++)
+				if (distanceList.get(j).getDistance() > distanceList.get(j + 1).getDistance()) {
+					Shape tempShape = distanceList.get(j);
+					distanceList.set(j, distanceList.get(j + 1));
+					distanceList.set(j + 1, tempShape);
 				}
 		return distanceList;
 	}
@@ -263,12 +265,12 @@ public class Screen {
 		List<Shape> timeList = new ArrayList<Shape>(listOfShapes);
 
 		int size = timeList.size();
-		for (int count1 = 0; count1 < size - 1; count1++)
-			for (int count2 = 0; count2 < size - count1 - 1; count2++)
-				if (timeList.get(count2).getTimestamp().after(timeList.get(count2 + 1).getTimestamp())) {
-					Shape tempShape = timeList.get(count2);
-					timeList.set(count2, timeList.get(count2 + 1));
-					timeList.set(count2 + 1, tempShape);
+		for (int i = 0; i < size - 1; i++)
+			for (int j = 0; j < size - i - 1; j++)
+				if (timeList.get(j).getTimestamp().after(timeList.get(j + 1).getTimestamp())) {
+					Shape tempShape = timeList.get(j);
+					timeList.set(j, timeList.get(j + 1));
+					timeList.set(j + 1, tempShape);
 				}
 		return timeList;
 	}
