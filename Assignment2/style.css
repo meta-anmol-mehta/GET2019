@@ -6,6 +6,9 @@ ul li{
   margin: 0;
   font-family: Arial;
 }
+body{
+  background: url(images/images/bodybg.png);
+}
 #header{
   background: #648CFF;
   display: flex;
@@ -91,6 +94,7 @@ a,a:link,a:active,a:visited{
 }
 #cover .coverImg{
   margin-right: 150px;
+  height: 550px;
 }
 .headingTitle h2{
   color: #6388FB;
