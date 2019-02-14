@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+}
+
+#heading{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 15px 0px 15px 30px;    
+}
+
+.input-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 10px;
+    flex-flow: wrap;
+    text-align: center;
+}
+
+.label {
+    text-align: right;
+    font-weight: bold; 
+    font-size: 17px;
+    width: 32%;
+    margin-top: 5px;
+}
+
+.icon-field-container{
+    display: flex;
+    width: 50%;
+    text-align: left;
+    
+}
+
+input[type=text], 
+input[type = email],
+input[type = tel],
+input[type = url]
+{
+    width: 250%;
+    padding: 5px 5px;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #a1a1a1;
+}
+
+select
+{
+    width: 258%;
+    padding: 5px 5px;
+    margin: 2px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #a1a1a1;
+}
+
+textarea
+{
+    width: 268%;
+    padding: 5px 5px;
+    margin: 2px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #a1a1a1;
+}
+
+.field-icon{
+    font-size: 11px;
+    padding: 6px 7px;
+    border: 1px solid #a1a1a1;
+}
+
+.select-field-icon{
+    font-size: 12px;
+    padding: 6px 7px;
+    height: 30px;
+    margin-top: 2px;
+    border: 1px solid #a1a1a1;
+}
+
+.textarea-field-icon{
+    font-size: 12px;
+    padding: 11px 7px;
+    height: 42px;
+    margin-top: 2px;
+    border: 1px solid #a1a1a1;
+}
+
+.button {
+    background-color: #f29c42;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.button-position{
+    width: 98%;
+    text-align: center;
+}
+
+
+input:invalid{
+    border:1px solid red;
+}
+
+
+#icon-button{
+    padding: 0px 5px;
+    background-color:#f29c42;
+}
