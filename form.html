@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <HTML>
 
@@ -22,7 +23,7 @@
                         <i class="fa fa-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" autofocus required pattern="[A-Za-z]{1,32}" oninvalid="this.setCustomValidity('Enter valid first name')" placeholder="First Name">
+                        <input type="text" required pattern="[A-Za-z]+" name="firstName" oninvalid="this.setCustomValidity('First name only contain uppercase and lowercase letters')" placeholder="First Name">
                     </div>
                 </div>
             </div>
@@ -37,7 +38,7 @@
                         <i class="fa fa-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" required placeholder="Last Name" pattern="[A-Za-z]{1,32}" autofocus required oninvalid="this.setCustomValidity('Enter valid last name')">
+                        <input type="text" required pattern="[A-Za-z]+" name="lastName" oninvalid="this.setCustomValidity('Last name only contain uppercase and lowercase letters')" placeholder="Last Name">
                     </div>
                 </div>
             </div>
@@ -51,7 +52,7 @@
                         <i class="fa fa-envelope"></i>
                     </div>
                     <div class="input-field">
-                        <input type="email" required placeholder="E-Mail Address" oninvalid="this.setCustomValidity('Enter your valid email-id')">
+                        <input type="email" name="email" required placeholder="E-Mail Address" oninvalid="this.setCustomValidity('Enter your valid email-id like anm@xyz.com')">
                     </div>
                 </div>
             </div>
@@ -65,7 +66,7 @@
                         <i class="fa fa-phone"></i>
                     </div>
                     <div class="input-field">
-                        <input type="tel"  pattern="[0-9]{10}" required oninvalid="this.setCustomValidity('Enter valid phone number')" placeholder="XXXXXXXXXX">
+                        <input type="tel" name="number" pattern="[0-9]{10}" required oninvalid="this.setCustomValidity('Enter valid phone number like 1234567890')" placeholder="XXXXXXXXXX">
                     </div>
                 </div>
             </div>
@@ -79,7 +80,7 @@
                         <i class="fa fa-home"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" required placeholder="Address"  oninvalid="this.setCustomValidity('Enter valid address')">
+                        <input type="text" name="address" required pattern="{10,}" placeholder="Address"  oninvalid="this.setCustomValidity('mini,mum length lenghth should be 10')">
                     </div>
                 </div>
             </div>
@@ -93,7 +94,7 @@
                         <i class="fa fa-home"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" pattern="[A-Za-z]{3,40}" autofocus required oninvalid="this.setCustomValidity('Enter valid city')" placeholder="City">
+                        <input type="text" name="city" pattern="[A-Za-z]{3,40}" autofocus required oninvalid="this.setCustomValidity('city only contain uppercase and lowercase letters')" placeholder="City">
                     </div>
                 </div>
             </div>
@@ -127,7 +128,7 @@
                         <i class="fa fa-home"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text"  pattern="[0-9]{6}" oninvalid="this.setCustomValidity('Enter valid zip code')" required placeholder="Zip Code">
+                        <input type="text"  name="zipcode" pattern="[0-9]{6}" oninvalid="this.setCustomValidity('zip code should contain 6 digit')" required placeholder="Zip Code">
                     </div>
                 </div>
             </div>
@@ -141,7 +142,7 @@
                         <i class="fa fa-globe-asia"></i>
                     </div>
                     <div class="input-field">
-                        <input type="url"  placeholder="Website or domain name">
+                        <input type="url" name="url" placeholder="Website or domain name">
                     </div>
                 </div>
             </div>
@@ -168,12 +169,12 @@
                         <i class="fa fa-pen"></i>
                     </div>
                     <div class="input-field">
-                        <textarea placeholder="Project Description"></textarea>
+                        <textarea name="projectDescription" placeholder="Project Description"></textarea>
                     </div>
                 </div>
             </div>
             <div class="button-position">
-                <button class="button" >Send <i class="fas fa-paper-plane" id="icon-button"></i> </button>
+                <button class="button" name="send">Send <i class="fas fa-paper-plane" id="icon-button"></i> </button>
             </div>
         </form>
 
@@ -182,4 +183,3 @@
 </BODY>
 
 </HTML>
-
