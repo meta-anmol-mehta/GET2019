@@ -1,0 +1,50 @@
+.large{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    font-size: 2.25rem;
+}
+.scroller{
+    position: relative;
+    overflow-y: hidden;
+    z-index: 2;
+    height: 2.75rem;
+}
+.scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .italicHeading{
+      font-style: italic;
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+      font-weight: 500;
+     
+  }
+  .paraHeading{
+      font-size: 1.3rem;
+  }
+  .continueReading{
+      font-weight: 550;
+      font-size: 1.3rem;
+  }
+  .circle{
+      border-radius: 2rem;
+
+  }
+  .firehouse{
+    font-style: italic;
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 550;
+  }
+  .font{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+}
+.text-centered{
+    text-align: center;
+    width: 100%;
+}
