@@ -1,0 +1,31 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TriangleAreaService WSDL service -->
+
+  <service name="TriangleArea" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://soap.training.metacube.com"/>
+      <parameter name="wsdlServiceElement" value="TriangleAreaService"/>
+      <parameter name="schemaQualified" value="http://soap.training.metacube.com"/>
+      <parameter name="wsdlServicePort" value="TriangleArea"/>
+      <parameter name="className" value="com.metacube.training.soap.TriangleAreaSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="TriangleArea"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="area" qname="operNS:area" xmlns:operNS="http://soap.training.metacube.com" returnQName="retNS:areaReturn" xmlns:retNS="http://soap.training.metacube.com" returnType="rtns:double" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:side1" xmlns:pns="http://soap.training.metacube.com" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:side2" xmlns:pns="http://soap.training.metacube.com" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:side3" xmlns:pns="http://soap.training.metacube.com" type="tns:double" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="area"/>
+
+  </service>
+</deployment>
