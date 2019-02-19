@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Remove Repeated String</title>
+		<script>
+				function stringFunction(){
+					var string = document.getElementById("inputText").value;
+					var newString="";
+					if(string==""){
+				
+					window.alert("enter valid string");
+					return;
+				
+					}
+					for(var i=0 ; i < string.length ;i++){
+						if(string.charAt(i) != string.charAt(i+1)){
+							newString += string.charAt(i);
+						}
+						else{
+							var temp=string.charAt(i);
+							for( ;i < string.length && string.charAt(i) == temp ; i++);	
+							i--;
+						}
+					}	
+					document.getElementById("inputText").value = newString;					
+				}
+		</script>
+	</head>
+	
+		<body style="display:block;text-align:center;margin-top:100px;">
+			<h3>Remove Repeated String</h3>
+			<input type="text" id="inputText" placeholder="enter String to be reduce"/>
+			<input type="button" value="Remove" onclick="stringFunction()" style="margin-left:10px;">
+		
+		
+	</body>
+</html>
+
