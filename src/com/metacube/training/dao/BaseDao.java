@@ -1,8 +1,12 @@
 package com.metacube.training.dao;
 
-public interface BaseDao {
+import java.util.Map;
+import com.metacube.training.model.BaseEntity;
+import com.metacube.training.model.ProductModel;
 
+public interface BaseDao<T extends BaseEntity> {
 
-	
+	public Map<ProductModel,Integer> getAll();
+
 	
 }

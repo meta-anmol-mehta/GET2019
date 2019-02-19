@@ -8,17 +8,12 @@ public class CartModel {
 	private Map<ProductModel,Integer> productsInCart; 
 	private double totalAmount;
 	
-	public CartModel(Map<ProductModel, Integer> productsInCart) {
-		
-		this.productsInCart = productsInCart;
-	
-	}
-	
 	public CartModel() {
 		
-		this.productsInCart=new HashMap<ProductModel, Integer>();
-		
+		this.productsInCart = new HashMap<ProductModel, Integer>();
+	
 	}
+	
 
 	public Map<ProductModel, Integer> getProductsInCart() {
 		return productsInCart;

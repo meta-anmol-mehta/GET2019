@@ -6,6 +6,15 @@ public class ProductModel extends BaseEntity {
 	private String pName;
 	private double price;
 	private String pCategory;
+	public ProductModel(int id,String pName, double price, String pCategory) {
+		super(id);
+		this.pName = pName;
+		this.price = price;
+		this.pCategory = pCategory;
+	}
+	public ProductModel() {
+		super();
+	}
 	public String getpName() {
 		return pName;
 	}
@@ -24,15 +33,7 @@ public class ProductModel extends BaseEntity {
 	public void setpCategory(String pCategory) {
 		this.pCategory = pCategory;
 	}
-	public ProductModel(int id,String pName, double price, String pCategory) {
-		super(id);
-		this.pName = pName;
-		this.price = price;
-		this.pCategory = pCategory;
-	}
-	public ProductModel() {
-		super();
-	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
