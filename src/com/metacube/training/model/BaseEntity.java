@@ -1,11 +1,15 @@
 package com.metacube.training.model;
 
+
+	/**
+	 * baseEntityu model
+	 * @author admin
+	 *
+	 */
 public class BaseEntity {
 
 	private int id;
 
-	
-	
 	public BaseEntity(int id) {
 		this.id = id;
 	}
@@ -21,7 +25,5 @@ public class BaseEntity {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
-	
+
 }

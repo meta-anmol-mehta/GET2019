@@ -3,17 +3,21 @@ package com.metacube.training.model;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * cartModel used to create entity of cart
+ * @author admin
+ *
+ */
 public class CartModel {
 
-	private Map<ProductModel,Integer> productsInCart; 
+	private Map<ProductModel, Integer> productsInCart;
 	private double totalAmount;
-	
+
 	public CartModel() {
-		
+
 		this.productsInCart = new HashMap<ProductModel, Integer>();
-	
+
 	}
-	
 
 	public Map<ProductModel, Integer> getProductsInCart() {
 		return productsInCart;
@@ -68,8 +72,5 @@ public class CartModel {
 		return "CartModel [productsInCart=" + productsInCart + ", totalAmount="
 				+ totalAmount + "]";
 	}
-	
-	
-	
-	
+
 }

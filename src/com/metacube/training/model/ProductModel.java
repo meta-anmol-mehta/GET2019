@@ -1,39 +1,52 @@
 package com.metacube.training.model;
 
+/**
+ * productModel used to create entity of product
+ * @author admin
+ *
+ */
+
 public class ProductModel extends BaseEntity {
 
-	
 	private String pName;
 	private double price;
 	private String pCategory;
-	public ProductModel(int id,String pName, double price, String pCategory) {
+
+	public ProductModel(int id, String pName, double price, String pCategory) {
 		super(id);
 		this.pName = pName;
 		this.price = price;
 		this.pCategory = pCategory;
 	}
+
 	public ProductModel() {
 		super();
 	}
+
 	public String getpName() {
 		return pName;
 	}
+
 	public void setpName(String pName) {
 		this.pName = pName;
 	}
+
 	public double getPrice() {
 		return price;
 	}
+
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
 	public String getpCategory() {
 		return pCategory;
 	}
+
 	public void setpCategory(String pCategory) {
 		this.pCategory = pCategory;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -46,6 +59,7 @@ public class ProductModel extends BaseEntity {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -70,11 +84,11 @@ public class ProductModel extends BaseEntity {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "ProductModel [pName=" + pName + ", price=" + price
 				+ ", pCategory=" + pCategory + ", getId()=" + getId() + "]";
 	}
 
-	
 }
