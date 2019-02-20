@@ -1,0 +1,153 @@
+*{
+	text-decoration: none;
+}
+
+.nav-bar{
+	height: 100%;
+	position: fixed !important;
+}
+
+.main{
+	margin-left: 225px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+span, p{
+	font-size: 15px;
+	color: black;
+}
+
+.list-group-item.active {
+	background-color: #004eff24!important;
+}
+
+.hover-color:hover {
+	color:rgb(88, 51, 255)!important;
+}
+
+.background-color{
+	background: rgb(91, 107, 232);
+}
+
+.search-box input{
+	background: rgb(109, 123, 235);
+	border-radius: 1.5rem;
+}
+
+.search-box{
+	position: relative;
+}
+
+.search-box i{
+	position: absolute;
+	right: 0;
+	top: 8;
+}
+
+input:focus{
+	outline: none;
+}
+
+input[placeholder]{
+	color: white !important;
+}
+
+ul{
+	margin-bottom: 0rem !important;
+}
+
+.profile-image{
+	height: 40px;
+}
+
+.notify-icon{
+	width: 35px;
+}
+
+.notification-dropdown{
+	width: 300px;
+}
+
+.container-bg{
+	background-color: #004eff24!important;
+}
+
+.container-icon{
+	background-color: #004eff24!important;
+}
+
+.media-image{
+	height: 55px;
+}
+
+.media-list{
+	max-height: 385px;
+	overflow-y: scroll;
+	outline: none;
+}
+
+::placeholder {
+	color: white;
+}
+
+.page-title-option{
+	background-color: #dbe6ff!important;
+}
+
+.dropdown-toggle::after {
+	display: none!important;
+}
+
+.twitter{
+	background-color: rgb(64,164,241) !important;
+	height: 211px;
+}
+
+.facebook{
+	background-color: rgb(91,107,232) !important;
+	height: 211px;
+}
+
+.notification-icon-badge{
+	position: absolute;
+	top: -8;
+	right: 10;
+}
+
+.area-chart{
+	height: 445px;
+}
+
+#lineChartContainer{
+	height: 411px;
+	width: 100%;
+}
+
+.notification-dropdown {
+	width: 300px;
+}
+
+p {
+	white-space: pre-wrap!important;
+}
+
+.notification-icon {
+	height: 40px;
+}
+
+.nav-content{
+	max-height: 554px;
+	overflow-y: scroll;
+}
+
+.progress-bar-container{
+	height:8px !important;
+}
+
+#donutChartContainer{
+	height: 370px; 
+	width: 100%;
+}

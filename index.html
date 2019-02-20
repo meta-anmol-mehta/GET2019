@@ -1,0 +1,512 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel = "stylesheet" type = "text/css" href = "style.css" />	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css">
+	
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+</head>
+<body> 
+	<div class = "container-fluid px-0 m-0 row">
+		<div class = "nav-bar col-md-2">
+			<div class = "my-4">
+				<h3 class="text-center py-2">
+					<i class="mdi mdi-assistant"></i>
+					<strong>ANNEX</strong>
+				</h3>   
+			</div>
+			<div class="nav-content">
+				<div class = "pt-4">
+					<div class="px-4 mb-4">
+						<span class = "p-4 text-muted">Main</span>
+					</div>
+					<div class = "list-group d-flex flex-column">
+						<a class = "list-group-item list-group-item-action active border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab">
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-airplay"></i>
+									Dashboard
+								</span>
+							</div>
+							<span class="badge badge-pill badge-primary">78</span>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab"> 
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-layers"></i>
+									Advanced UI
+								</span>
+							</div>
+							<img src = "images/chevron-right.png"></img>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab">
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-calendar-clock"></i>
+									Calendar
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class = "pt-4">
+					<div class="px-4 mb-4">
+						<span class = "p-4 text-muted">Component</span>
+					</div>
+					<div class = "list-group d-flex flex-column">
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab"> 
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-bullseye"></i> 
+									UI Elements
+								</span>
+							</div>
+							<img src = "images/chevron-right.png"></img>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab">
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-clipboard-outline"></i>
+									Forms
+								</span>
+							</div>
+							<span class="badge badge-pill badge-info">82</span>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab"> 
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-gauge"></i>
+									Charts
+								</span>
+							</div>
+							<img src = "images/chevron-right.png"></img>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab"> 
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-cards-outline"></i>
+									Icons
+								</span>
+							</div>
+							<img src = "images/chevron-right.png"></img>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab"> 
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-table"></i>
+									Tables
+								</span>
+							</div>
+							<img src = "images/chevron-right.png"></img>
+						</a>
+					</div>
+				</div>
+				<div class = "pt-4">
+					<div class="px-4 mb-4">
+						<span class = "p-4 text-muted">Extra</span>
+					</div>
+					<div class = "list-group d-flex flex-column">
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab">
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-map-marker-multiple"></i>
+									Maps
+								</span>
+							</div>
+							<span class="badge badge-pill badge-danger">78</span>
+						</a>
+						<a class = "list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle = "list" role = "tab"> 
+							<div class = "px-2" href = "#">
+								<span class = "p-2 text-black hover-color">
+									<i class="mdi mdi-google-pages"></i>
+									Pages
+								</span>
+							</div>
+							<img src = "images/chevron-right.png"></img>
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class = "main col-md-10 container-bg">
+			<div class = "row d-flex flex-row justify-content-between background-color p-3">
+				<div class = "col-2 m-2 border-0 text-white search-box">
+					<input class = "px-3 py-1 border-0 text-light" type = "text" placeholder="Search...">
+					<i class="fas fa-search"></i>
+				</div>
+				<ul class="list-unstyled d-flex flex-row align-items-center"> 
+					<li>
+						<a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							English <img src="images/us_flag.jpg" class="ml-2" height="16" alt="">
+						</a>
+					</li>
+					<li class=" dropdown notification-list">
+						<a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							<i class="far fa-envelope fa-lg"></i>
+							<span class="badge badge-danger notification-icon-badge">5</span>
+						</a>
+					</li>
+
+					<li class=" dropdown notification-list">
+						<a class="nav-link dropdown-toggle text-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							<i class="far fa-bell fa-lg"></i>
+							<span class="badge badge-success notification-icon-badge">23</span>
+						</a>
+					</li>
+
+					<li class="dropdown notification-list">
+						<a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+							<img class="profile-image rounded-circle" src="images/Profile1.jpg" alt="user" class="rounded-circle">
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="container-fluid ">
+
+				<!-- row1-->
+				<div class="row my-4">
+					<div class="col-sm-12">
+						<div class="page-title-box">
+							<div class="btn-group float-right">
+								<ol class="breadcrumb page-title-option p-0 m-0">
+									<li class="breadcrumb-item"><a href="#" class="text-muted">Annex</a></li>
+									<li class="breadcrumb-item active">Dashboard</li>
+								</ol>
+							</div>
+							<h4 class="page-title">Dashboard</h4>
+						</div>
+					</div>
+				</div>
+
+				<!--row2-->
+				<div class="row my-4">
+					<div class="col-md-6 col-lg-6 col-xl-3">
+						<div class="card ">
+							<div class="card-body">
+								<div class="d-flex flex-row">
+									<div class="col-3 align-self-center p-0">
+										<div class="container-icon rounded-circle p-3 text-center">
+											<i class="mdi mdi-webcam text-info"></i>
+										</div>
+									</div>
+									<div class="col-6 align-self-center text-center">
+										<div class="m-l-10">
+											<h5 class="mt-0 round-inner font-weight-bold">$18090</h5>
+											<p class="mb-0 text-muted">Visits Today</p>                                                                 
+										</div>
+									</div>
+									<div class="col-3 align-self-end align-self-center">
+										<h6 class="m-0 float-right text-center text-danger"> 
+											<i class="mdi mdi-arrow-down"></i> 
+											<span class="text-danger"><b>5.26%</b></span>
+										</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-md-6 col-lg-6 col-xl-3">
+						<div class="card ">
+							<div class="card-body">
+								<div class="d-flex flex-row">
+									<div class="col-3 align-self-center p-0">
+										<div class="container-icon rounded-circle p-3 text-center">
+											<i class="mdi mdi-account-multiple-plus text-info"></i>
+										</div>
+									</div>
+									<div class="col-6 text-center align-self-center">
+										<div class="m-l-10 ">
+											<h5 class="mt-0 round-inner">562</h5>
+											<p class="mb-0 text-muted">New Users</p>
+										</div>
+									</div>
+									<div class="col-3 align-self-end align-self-center">
+										<h6 class="m-0 float-right text-center text-success"> 
+											<i class="mdi mdi-arrow-up"></i>
+											<span class="text-success">
+												<b>8.68%</b>
+											</span>
+										</h6>
+									</div>                                                        
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-6 col-xl-3">
+						<div class="card ">
+							<div class="card-body">
+								<div class="d-flex flex-row">
+									<div class="col-3 align-self-center p-0">
+										<div class="container-icon rounded-circle p-3 text-center">
+											<i class="mdi mdi-basket text-info"></i>
+										</div>
+									</div>
+									<div class="col-6 align-self-center text-center">
+										<div class="m-l-10 ">
+											<h5 class="mt-0 round-inner">7514</h5>
+											<p class="mb-0 text-muted">New Orders</p>
+										</div>
+									</div>
+									<div class="col-3 align-self-end align-self-center">
+										<h6 class="m-0 float-right text-center text-danger">
+											<i class="mdi mdi-arrow-down"></i> 
+											<span class="text-danger"><b>2.35%</b></span>
+										</h6>
+									</div> 
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-6 col-xl-3">
+						<div class="card ">
+							<div class="card-body">
+								<div class="d-flex flex-row">
+									<div class="col-3 align-self-center p-0">
+										<div class="container-icon rounded-circle p-3 text-center">
+											<i class="mdi mdi-rocket text-info"></i>
+										</div>
+									</div>
+									<div class="col-6 align-self-center text-center">
+										<div class="m-l-10">
+											<h5 class="mt-0 round-inner">$32874</h5>
+											<p class="mb-0 text-muted">Total Sales</p>
+										</div>
+									</div>
+									<div class="col-3 align-self-end align-self-center">
+										<h6 class="m-0 float-right text-center text-success">
+											<i class="mdi mdi-arrow-up"></i> 
+											<span class="text-success"><b>2.35%</b></span>
+										</h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!--row3-->
+				<div class="row my-4">
+					<div class="col-md-12 col-lg-12 col-xl-8"> 
+						<div class="card mb-3">
+							<div class="card-body">
+								<h5 class="header-title pb-3 mt-0">Overview</h5>
+								<div id="lineChartContainer"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-12 col-xl-4">
+
+						<div class="card mb-3">
+							<div class="card-body">
+								<a href="" class="btn btn-primary btn-sm float-right">More Info</a>
+								<h5 class="header-title mt-0 pb-3">Revenue By Country</h5>
+
+								<ul class="list-unstyled list-inline text-center">
+									<li class="list-inline-item">
+										<p><i class="mdi mdi-checkbox-blank-circle text-primary mr-2"></i>Canada</p> 
+									</li>
+									<li class="list-inline-item">
+										<p><i class="mdi mdi-checkbox-blank-circle text-info mr-2"></i>USA</p>
+									</li>
+									<li class="list-inline-item">
+										<p><i class="mdi mdi-checkbox-blank-circle text-greylight mr-2"></i>London</p>    
+									</li>
+								</ul> 
+								<div id="donutChartContainer"></div>
+								
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+
+				<!--row4-->
+				<div class="row my-4">
+					<div class="col-md-12 col-lg-6 col-xl-4">
+						<div class="card twitter mb-4">
+							<div class="card-body">
+								<div class="carousel slide" data-ride="carousel">
+									
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<div class="row d-flex justify-content-center text-center">
+												<div class="col-sm-12 carousel-icon">
+													<i class="fab fa-twitter fa-3x text-white pt-3"></i>
+												</div>
+												<div class="col-6 text-white">    
+													<h2>54k</h2>
+													<p class="text-white">Followers</p>      
+												</div>
+												<div class="col-6 text-white">               
+													<h2>44k</h2>
+													<p class="text-white">Tweets</p> 
+												</div>
+											</div>
+										</div>
+
+										<div class="carousel-item">
+											<div class="row d-flex justify-content-center">
+												<div class="col-sm-12 carousel-icon text-center">
+													<i class="fab fa-twitter fa-3x text-white pt-3"></i>
+												</div>
+												<div class="col-sm-10 mx-auto text-white text-center">
+													<p class="text-white">Lorem Ipsum is simply dummy text of the <span class="warning text-white">#TWITTER</span> and typesetting industry. A description list is perfect for defining terms.</p>
+												</div>
+											</div>
+										</div>                                            
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card facebook ">
+							<div class="card-body">
+								<div class="carousel slide" data-ride="carousel">
+
+									<div class="carousel-inner">
+										<div class="carousel-item">
+											<div class="row d-flex justify-content-center">
+												<div class="col-lg-12 carousel-icon text-center">
+													<i class="fab fa-facebook-f fa-3x text-white pt-3"></i>
+												</div>
+												<div class="col-sm-10 mx-auto text-white text-center">
+													<p class="text-white">Lorem Ipsum is simply dummy text of the <mark> FACEBOOK </mark> and typesetting industry.</p>
+												</div>
+											</div>
+										</div>
+										<div class="carousel-item active">
+											<div class="row d-flex justify-content-center text-white text-center">
+												<div class="col-sm-12 carousel-icon">
+													<i class="fab fa-facebook-f fa-3x text-white pt-3"></i>
+												</div>
+												<div class="col-6">                      
+													<h2>54k</h2>
+													<p class="text-white">Followers</p>  
+												</div>
+												<div class="col-6">         
+													<h2>44k</h2>
+													<p class="text-white">Posts</p>         
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-lg-6 col-xl-4">
+						<div class="area-chart card bg-white mb-3">
+							<div class="card-body new-user">
+
+								<div class="row text-center">
+									<div class="col-6">
+										<h5><i class="mdi mdi-database mr-2 text-primary font-20"></i> 5 TB</h5>
+										<h6 class="text-lightdark">Bandwidth usage</h6>
+										<span class="text-muted"> <small>June 2018</small></span>
+									</div>
+									<div class="col-6">
+										<h5><i class="mdi mdi-download mr-2 text-success font-20"></i>5412</h5>
+										<h6 class="text-lightdark">Download count</h6>
+										<span class="text-muted"> <small>June 2018</small></span>
+									</div>
+								</div>
+								<div id="areaChartContainer" ></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 col-lg-12 col-xl-4">
+						<div class="card bg-white mb-3">
+							<img src="images/polar.jpg" alt="" class="img-fluid">
+
+							<div class="card-body bg-primary">                                
+								<div class="row">
+									<div class="col-6  align-self-center">
+										<div class="row">
+											<div class="col-lg-6 col-sm-6 text-center">
+												<i class="mdi mdi-weather-partlycloudy fa-5x text-white"></i>
+												<h6 class="text-white font-weight-bold">SUNDAY <span class="text-white">25<sup>th</sup></span></h6>
+											</div>
+											<div class="col-lg-6 col-sm-6 text-center align-self-center">
+												<h5 class="mt-0 text-white"><b>32°</b></h5>
+												<p class="text-white  font-12">Partly cloudy</p>
+												<p class="text-white font-12">15km/h - 37%</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-6 align-self-center">
+										<div class="row">
+											<div class="col-6 text-center">
+												<h6 class="text-white mt-0 font-14">MON</h6>
+												<i class="fas fa-cloud text-light"></i>
+												<h6 class="text-white font-14">38°<i class="wi-degrees"></i></h6>
+											</div>
+											<div class="col-6 text-center">
+												<h6 class="text-white mt-0 font-14">TUE</h6>
+												<i class="fas fa-cloud text-light"></i>
+												<h6 class="text-white font-14">32°<i class="wi-degrees"></i></h6>
+											</div>                                           
+										</div>
+									</div>
+								</div>                           
+							</div>
+						</div>
+					</div> 
+
+				</div>
+
+				<!--row5-->
+				<div class="row my-4">
+					<div class="col-md-12 col-lg-12 col-xl-8">
+						<div class="card bg-white">
+							<div class="card-body new-user">
+								<h5 class="header-title mb-4 mt-0">Members Profiles</h5>
+								<div class="table-responsive">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-lg-12 col-xl-4">
+											<div class="card bg-white">
+												<div class="card-body">
+													<h5 class="mt-0 mb-4">New Users</h5>
+													                                   
+												</div>                                
+											</div>
+										</div>
+									</div>  
+									
+
+								</div>
+
+								<footer class="footer bg-white text-center p-3">
+									2018 Annex by Mannatthemes.
+								</footer>
+							</div>
+
+						</div>
+
+						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+						<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+						<script src="http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+						<script src="script/donutChart.js"></script>
+						<script src="script/areaChart.js"></script>
+						<script src="script/lineChart.js"></script>
+
+					</body>
+					</html>
