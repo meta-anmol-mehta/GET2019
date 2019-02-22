@@ -78,6 +78,9 @@ ul{
 }
 
 .container-icon{
+	width: 60px;
+	padding-top: 15px;
+	height: 60px;
 	background-color: #004eff24!important;
 }
 
