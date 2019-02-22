@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.metacube.training.dao.InMemoryDao;
+import com.metacube.training.dao.ProductDao;
+import com.metacube.training.enums.DBType;
 import com.metacube.training.enums.Status;
 import com.metacube.training.factory.BaseFactory;
 import com.metacube.training.model.CartModel;
@@ -24,12 +26,19 @@ public class CartFacade {
 	private CartModel model;
 	private Map<ProductModel, Integer> productsAvailable;
 	private Map<ProductModel, Integer> productsInCart;
+	private ProductDao dao;
 
-	public CartFacade() {
+	public CartFacade(DBType dbType) {
 
 		this.model = BaseFactory.createCart();
 		productsInCart = new HashMap<ProductModel, Integer>();
 		productsAvailable = new HashMap<ProductModel, Integer>();
+		if(dbType.equals(DBType.INMEMORY)){
+			dao=BaseFactory.createInMemoryDao();
+		}
+		else{
+			dao=BaseFactory.createInSQLDao();	
+		}
 	}
 
 	/**
@@ -56,12 +65,12 @@ public class CartFacade {
 	 * @param memoryDao
 	 * @return enum Status 
 	 */
-	public Status addProductToCart(int id, InMemoryDao memoryDao) {
+	public Status addProductToCart(int id,int quantity) {
 
 		if (id < 0) {
 			return Status.FAILURE;
 		}
-		productsAvailable = memoryDao.getAll();
+		productsAvailable = dao.getAll();
 
 		if (isProduct(id)) {
 			return Status.DUPLICATE;
@@ -137,4 +146,14 @@ public class CartFacade {
 
 	}
 
+	public ProductDao getDao() {
+		return dao;
+	}
+
+	public void setDao(ProductDao dao) {
+		this.dao = dao;
+	}
+
+	
+	
 }

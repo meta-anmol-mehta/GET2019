@@ -2,6 +2,7 @@ package com.metacube.training.factory;
 
 import com.metacube.training.dao.InMemoryDao;
 import com.metacube.training.dao.InMySQLDao;
+import com.metacube.training.enums.DBType;
 import com.metacube.training.facade.CartFacade;
 import com.metacube.training.model.CartModel;
 import com.metacube.training.model.ProductModel;
@@ -65,7 +66,7 @@ public class BaseFactory {
 	 * used to create object of CartFacade
 	 * @return CartFacade object
 	 */
-	public static CartFacade createCartFacade() {
-		return new CartFacade();
+	public static CartFacade createCartFacade(DBType dbType) {
+		return new CartFacade(dbType);
 	}
 }

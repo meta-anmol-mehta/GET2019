@@ -6,6 +6,7 @@ import com.metacube.training.dao.InMemoryDao;
 import com.metacube.training.dao.ProductDao;
 import com.metacube.training.enums.DBType;
 import com.metacube.training.enums.Status;
+import com.metacube.training.facade.CartFacade;
 import com.metacube.training.factory.BaseFactory;
 import com.metacube.training.model.ProductModel;
 
@@ -18,23 +19,17 @@ import com.metacube.training.model.ProductModel;
 
 public class ViewController {
 	
-		private DBType dbType;
-		private ProductDao productDao;
+		private CartFacade cartFacade;
 		
 		public ViewController(DBType dbType){
 			
-			if(dbType.equals(DBType.INMEMORY)){
-				productDao=BaseFactory.createInMemoryDao();
-			}
-			else{
-				productDao=BaseFactory.createInSQLDao();
-			}
+			cartFacade=BaseFactory.createCartFacade(dbType);
 		}
 	
 		public Map<ProductModel, Integer> getAll() {
 
 			
-			return productDao.getAll();
+			return cartFacade.getCartProducts();
 			
 
 		}
@@ -47,10 +42,9 @@ public class ViewController {
 		 * 
 		 */
 		
-		public Status createProduct(int id, String pName, double price,
-				String pCategory, int quantity) {
+		public Status createProduct(int id,int quantity) {
 
-			return productDao.createProduct(id, pName, price, pCategory, quantity);
+			return cartFacade.addProductToCart(id, quantity);
 		
 
 		}
@@ -63,7 +57,7 @@ public class ViewController {
 		
 		public Status updateProduct(int id, int quantity) {
 
-			return productDao.updateProduct(id, quantity);
+			return cartFacade.updateProductToCart(id, quantity);
 
 		}
 
@@ -75,7 +69,7 @@ public class ViewController {
 		
 		public Status deleteProduct(int id) {
 
-			return productDao.deleteProduct(id);
+			return cartFacade.removeProductToCart(id);
 			
 
 		}
