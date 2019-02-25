@@ -55,7 +55,7 @@ public class CategoryDao implements BaseDao<Category> {
 			preparedStatement = con.prepareStatement(query);
 			preparedStatement.setInt(1, entity.getId());
 			preparedStatement.setString(2, entity.getName());
-			resultSet = preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			return Status.INSERTED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
@@ -71,7 +71,7 @@ public class CategoryDao implements BaseDao<Category> {
 			query = MyDatabaseQueries.DELETE_CATEGORY;
 			preparedStatement = con.prepareStatement(query);
 			preparedStatement.setInt(1, id);
-			resultSet = preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			return Status.DELETED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
@@ -88,7 +88,7 @@ public class CategoryDao implements BaseDao<Category> {
 			preparedStatement = con.prepareStatement(query);
 			preparedStatement.setInt(1, entity.getId());
 			preparedStatement.setString(2, entity.getName());
-			resultSet = preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			return Status.UPDATED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
