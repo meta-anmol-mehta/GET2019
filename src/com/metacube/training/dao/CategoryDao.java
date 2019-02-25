@@ -86,8 +86,8 @@ public class CategoryDao implements BaseDao<Category> {
 			con = MyConnectionManager.getConnection();
 			query = MyDatabaseQueries.UPDATE_CATEGORY;
 			preparedStatement = con.prepareStatement(query);
-			preparedStatement.setInt(1, entity.getId());
-			preparedStatement.setString(2, entity.getName());
+			preparedStatement.setInt(2, entity.getId());
+			preparedStatement.setString(1, entity.getName());
 			preparedStatement.executeUpdate();
 			return Status.UPDATED;
 		} catch (SQLException e) {
