@@ -25,10 +25,10 @@ public class AdvertisementResource {
 	AdvertisementFacade advertisementFacade = BaseFactory.createAdvertisementFacade();
 
 	@POST
-	@Path("/InsertAdvertisement/{id}/{title}/{desc}")
+	@Path("/InsertAdvertisement")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Status insertAdvertisement(@HeaderParam("Authorization") String authorization,@PathParam("id") int id,@PathParam("title") String title,@PathParam("desc") String desc) {
+	public Status insertAdvertisement(@HeaderParam("Authorization") String authorization) {
 
 		Advertisement advertisement=new Advertisement(id,title,desc);
 		
