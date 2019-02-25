@@ -28,9 +28,8 @@ public class AdvertisementResource {
 	@Path("/InsertAdvertisement")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Status insertAdvertisement(@HeaderParam("Authorization") String authorization) {
+	public Status insertAdvertisement(@HeaderParam("Authorization") String authorization,Advertisement advertisement) {
 
-		Advertisement advertisement=new Advertisement(id,title,desc);
 		
 		if (!"REST".equals(authorization)) {
 			return Status.ERROR;
