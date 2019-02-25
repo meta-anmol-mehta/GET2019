@@ -27,7 +27,7 @@ public class CategoryResource {
 	@Path("/InsertCategory/{id}/{categoryName}")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Status insertCategory(@HeaderParam("Authorization") String authorization, @PathParam("id") int id,@PathParam("categoryName") String categoryName) {
+	public Status insertCategory(@HeaderParam("Authorization") String authorization) {
 
 		Category category=new Category(id, categoryName);
 		
