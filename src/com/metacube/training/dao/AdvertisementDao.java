@@ -92,9 +92,9 @@ public class AdvertisementDao implements BaseDao<Advertisement> {
 			con = MyConnectionManager.getConnection();
 			query = MyDatabaseQueries.UPDATE_ADVERTISEMENT;
 			preparedStatement = con.prepareStatement(query);
-			preparedStatement.setInt(1, entity.getId());
-			preparedStatement.setString(2, entity.getTitle());
-			preparedStatement.setString(3, entity.getDescription());
+			preparedStatement.setInt(3, entity.getId());
+			preparedStatement.setString(1, entity.getTitle());
+			preparedStatement.setString(2, entity.getDescription());
 			preparedStatement.executeUpdate();
 			return Status.UPDATED;
 		} catch (SQLException e) {
