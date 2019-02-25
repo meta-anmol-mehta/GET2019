@@ -61,7 +61,7 @@ public class AdvertisementDao implements BaseDao<Advertisement> {
 			preparedStatement.setInt(1, entity.getId());
 			preparedStatement.setString(2, entity.getTitle());
 			preparedStatement.setString(3, entity.getDescription());
-			resultSet = preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			return Status.INSERTED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
@@ -77,7 +77,7 @@ public class AdvertisementDao implements BaseDao<Advertisement> {
 			query = MyDatabaseQueries.DELETE_ADVERTISEMENT;
 			preparedStatement = con.prepareStatement(query);
 			preparedStatement.setInt(1, id);
-			resultSet = preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			return Status.DELETED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
@@ -95,7 +95,7 @@ public class AdvertisementDao implements BaseDao<Advertisement> {
 			preparedStatement.setInt(1, entity.getId());
 			preparedStatement.setString(2, entity.getTitle());
 			preparedStatement.setString(3, entity.getDescription());
-			resultSet = preparedStatement.executeQuery();
+			preparedStatement.executeUpdate();
 			return Status.UPDATED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
