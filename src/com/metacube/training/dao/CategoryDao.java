@@ -56,6 +56,7 @@ public class CategoryDao implements BaseDao<Category> {
 			preparedStatement.setInt(1, entity.getId());
 			preparedStatement.setString(2, entity.getName());
 			preparedStatement.executeUpdate();
+			con.close();
 			return Status.INSERTED;
 		} catch (SQLException e) {
 			MyLogFile.writeToFile("Errorcode:"+e.getErrorCode()+"Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
