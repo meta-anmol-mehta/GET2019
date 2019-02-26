@@ -61,6 +61,7 @@ public class AdvertisementDao implements BaseDao<Advertisement> {
 			preparedStatement.setInt(1, entity.getId());
 			preparedStatement.setString(2, entity.getTitle());
 			preparedStatement.setString(3, entity.getDescription());
+			preparedStatement.setInt(4,entity.getCategoryID());
 			preparedStatement.executeUpdate();
 			return Status.INSERTED;
 		} catch (SQLException e) {
