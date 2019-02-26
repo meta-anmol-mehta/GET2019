@@ -8,15 +8,25 @@ public class Advertisement extends BaseEntity {
 
 	private String title;
 	private String description;
+	private int categoryID;
 
-	public Advertisement() {
+	public int getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public Advertisement() {
 		super();
 	}
 	
-	public Advertisement(int id,String title, String description) {
+	public Advertisement(int id,String title, String description,int categoryID) {
 		super(id);
 		this.title = title;
 		this.description = description;
+		this.categoryID=categoryID;
 	}
 
 	public String getTitle() {
