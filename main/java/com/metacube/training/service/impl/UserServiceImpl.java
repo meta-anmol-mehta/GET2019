@@ -17,31 +17,61 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public boolean add(User user) {
+		try{
 		return userDAO.add(user);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 
 	@Override
 	public User get(Integer id) {
+		try{
 		return userDAO.get(id);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 
 	@Override
 	public boolean update(User user) {
+		try{
 		return userDAO.update(user);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 
 	@Override
 	public List<User> getAll() {
+		try{
 		return userDAO.getAll();
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 
 	@Override
 	public boolean delete(Integer id) {
+		try{
 		return userDAO.delete(id);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 	
 	@Override
 	public List<User> getByAttribute(String attribute , String Value){
-	        return userDAO.getByAttribute(attribute,Value);
+	        try{
+		return userDAO.getByAttribute(attribute,Value);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	    }
 }
