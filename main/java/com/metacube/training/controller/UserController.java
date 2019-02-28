@@ -30,34 +30,59 @@ public class UserController {
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String add(User user) {
+		try{
 		userService.add(user);
 		return "redirect:/user/all";
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 
 	
 	
 	@RequestMapping(value = "/edit/{userId}", method = RequestMethod.GET)
 	public ModelAndView get( @PathVariable("userId") Integer userId) {
+		try{
 		User user = userService.get(userId);
 		return new ModelAndView("user/edit", "user",user);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
 	public String update(User user) {
+		try{
 		userService.update(user);
 		return "redirect:/user/all";
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public ModelAndView getAll() {
+		try{
 		List<User> users = userService.getAll(); 
 		return new ModelAndView("user/all", "users", users);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 	
 	@RequestMapping(value = "/delete/{userId}", method = RequestMethod.GET)
 	public String delete(@PathVariable("userId") Integer userId) {
+		try{
 		userService.delete(userId);
 		return "redirect:/user/all";
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
 	}
 	
 	
@@ -68,7 +93,12 @@ public class UserController {
 	}
 	@RequestMapping(value = "/search_result", method = RequestMethod.GET)
     public ModelAndView searchResult(String attribute, String attribute_value) {
-        List<User> user = userService.getByAttribute(attribute,attribute_value); 
-        return new ModelAndView("user/search_result", "user", user);
+       		try{
+		List<User> user = userService.getByAttribute(attribute,attribute_value); 
+        	return new ModelAndView("user/search_result", "user", user);
+		}
+		catch(NullPointerException e){
+		MyLogFile.writeToFile("Mesage:"+e.getMessage()+"Time:"+new Date()+"\n");
+		}
     }
 }
