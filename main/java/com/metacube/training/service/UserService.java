@@ -8,11 +8,11 @@ import com.metacube.training.model.User;
 @Service
 public interface UserService {
 	
-	public boolean add(User employee);
+	public boolean add(User user);
 	
 	public User get(Integer id);
 	
-	public boolean update(User employee);
+	public boolean update(User user);
 	
 	public List<User> getAll();
 	
