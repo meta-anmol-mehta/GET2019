@@ -1,0 +1,5 @@
+export class User{
+    name:String;
+    contact:number;
+    place:string;
+}

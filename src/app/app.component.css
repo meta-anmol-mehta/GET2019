@@ -1,0 +1,17 @@
+#header{
+   background: #91E4FB;
+}
+#header h1{
+    text-align: center;
+}
+#addBlock{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+#addBlock input{
+    height: 30px;
+    float:right;
+}
