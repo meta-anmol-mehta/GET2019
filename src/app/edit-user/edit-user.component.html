@@ -1,0 +1,10 @@
+<div class="m-3 p-3">
+  <h1>Edit User</h1>
+  <div *ngIf="selectedUser">
+  <p>Name:<input type="text" name="name" placeholder="name" [(ngModel)]="selectedUser.name"></p>
+  <p>Contact:<input type="text" name="contact" placeholder="contact" [(ngModel)]="selectedUser.contact"></p>
+  <p>Place:<input type="text" name="place" placeholder="place" [(ngModel)]="selectedUser.place"></p>
+  </div>
+  <a routerLink="/users"><input type="button" value="save" class="mr-3" (click)="edit(selectedUser)"  ></a>
+  <a routerLink="/users"><input type="button" value="back" ></a>
+  </div>
