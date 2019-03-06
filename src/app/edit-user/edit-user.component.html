@@ -1,9 +1,9 @@
 <div class="m-3 p-3">
   <h1>Edit User</h1>
   <div *ngIf="selectedUser">
-  <p>Name:<input type="text" name="name" placeholder="name" [(ngModel)]="selectedUser.name"></p>
-  <p>Contact:<input type="text" name="contact" placeholder="contact" [(ngModel)]="selectedUser.contact"></p>
-  <p>Place:<input type="text" name="place" placeholder="place" [(ngModel)]="selectedUser.place"></p>
+<p>Name:<input type="text" name="name" placeholder="name" [(ngModel)]="name" required pattern="[a-zA-Z]{2,20}[ ][a-zA-Z]{2,20}" oninvalid="this.setCustomValidity('name contain only alphabet and space between first and last name')"></p>
+<p>Contact:<input type="text" name="contact" placeholder="contact" [(ngModel)]="contact" required pattern="([0-9]{10})|([+][0-9]{2}[-][0-9]{10})" oninvalid="this.setCustomValidity('for ex:1234567890 or +91-1234567890')"></p>
+<p>Place:<input type="text" name="place" placeholder="place" [(ngModel)]="place" required pattern="[a-zA-Z]{5,50}" oninvalid="this.setCustomValidity('place contain only alphabet ')"></p>
   </div>
   <a routerLink="/users"><input type="button" value="save" class="mr-3" (click)="edit(selectedUser)"  ></a>
   <a routerLink="/users"><input type="button" value="back" ></a>
