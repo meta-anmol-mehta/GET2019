@@ -25,10 +25,8 @@ public class MultiVariate {
 		String polynomial = "";
 		for (Term term : multivariate) {
 			polynomial += term.coefficient;
-			for (VariableList variables : term.variableList) {
-				polynomial += " * " + variables.getVariable() + "^"
-						+ variables.getPower();
-			}
+				polynomial += " * " + term.variable.getVariable() + "^"
+						+ term.variable.getPower();
 			if (term != multivariate.get(multivariate.size() - 1)) {
 				polynomial += " + ";
 			}
