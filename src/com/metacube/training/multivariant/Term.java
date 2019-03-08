@@ -9,7 +9,7 @@ import com.metacube.training.multivariant.VariableList;
  */
 public  class Term {
 	public double coefficient;
-	public List<VariableList> variableList;
+	public VariableList variableList;
 
 	public Term(double coefficient, List<VariableList> variableList) {
 		this.coefficient = coefficient;
