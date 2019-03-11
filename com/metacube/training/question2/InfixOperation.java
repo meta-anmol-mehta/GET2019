@@ -36,7 +36,7 @@ public class InfixOperation {
 					while (!(stack.isEmpty()) && !("(".equals(stack.peek()))) {
 						postfix.append(stack.pop());
 					}
-					if (!(stack.isEmpty()) && !("(".equals(stack.peek()))) {
+					if (!(stack.isEmpty()) && ("(".equals(stack.peek()))) {
 						throw new AssertionError("invalid expression");
 					}
 					if (!(stack.isEmpty()) && "(".equals(stack.peek())) {
