@@ -1,0 +1,11 @@
+{
+"hi":"hello",
+"mango":"fruit",
+"cat":"animal",
+"nest":"bird home",
+"tarzan":"fictional character",
+"apple":"fruit",
+"cricket":"game",
+"neck":"organ",
+"zoo":"animal house"
+}
