@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.json.simple.JSONObject;
-import org.json.simple.JsonObject;
+
 
 public class BinarySearchTree<T> implements Dictionary<T> {
 
@@ -37,7 +37,7 @@ public class BinarySearchTree<T> implements Dictionary<T> {
 		if(key==null||key.equals(" ")){
 			throw new AssertionError("invalid key");
 		}
-		else if(value!=null){
+		else if(value==null){
 			throw new AssertionError("invalid value");	
 		}
 		else{
